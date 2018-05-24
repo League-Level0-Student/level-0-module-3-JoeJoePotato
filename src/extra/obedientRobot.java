@@ -13,10 +13,22 @@ public class obedientRobot {
 		potato.miniaturize();
 String shape=JOptionPane.showInputDialog("What shape do you want the robot to draw?/n The options are square, circle and triangle.\n No caps please.");
 String color=JOptionPane.showInputDialog("What color do you want the robot to draw in?/n The options are red, green and blue.\n No caps please.");
-drawCircle();
 
+if(color.equals("red")) {
+potato.setPenColor(255,0,0);
+}else if(color.equals("blue")) {
+potato.setPenColor(0,255,0);}
+else if(color.equals("green")) {
+potato.setPenColor(0,0,255);} else {
+potato.setRandomPenColor();}
 
-
+if(color.equals("square")) {
+drawSquare();
+}else if(color.equals("blue")) {
+potato.setPenColor(0,255,0);}
+else if(color.equals("green")) {
+potato.setPenColor(0,0,255);} else {
+potato.setRandomPenColor();}
 	}
 
 	static void drawSquare() {
